@@ -1,0 +1,34 @@
+Nama : Triyanti Wafda Malini
+Nim : 1515015049
+Kecerdasan Buatan
+
+
+Pertanyaan/tugas di modul 2
+
+1. Mengubah bahasa prolog menjadi bahasa natural
+	a. orang(dian) = dian adalah orang
+	b. mobil(atoz) = atoz adalah merk mobil
+	c. suka(dian,atoz) = dian suka mobil atoz
+	d. dijual(atoz) = dijual mobil merk atoz
+	e. X dapat membeli Y jika X adalah orang dan Y adalah mobil dan X suka dengan Y dan Y dijual.
+	f. Apa yang disukai?
+
+2. Mengubah bahasa natural menjadi bahasa prolog
+	a. Ricky mempunyai hobi bermain catur = hobi(Ricky,catur).
+	b. Embang orangnya pemalas = pemalas(embang).
+	c. Yusida seorang vegetarian = vegetarian(yusida).
+	d. Kusdiar pandai bermain gitar = pandai(kusdiar,gitar)
+	e. mobil yang berwarna merah itu milik sadek,bermerk BMW = mobil(sadek,merah), mobil(sadek,BMW).
+	f. Awan seorang pemain piano, berasal dari pontianak bersuku jawa = pemain_piano(awan), pontianak(asal);jawa(suku).
+	g. Seseorang dikatakan baik jika mempunyai sifat penyayang dan dermawan = baik(orang) :- sifat(penyayang,dermawan).
+	h. seseorang dikatakan pintar jika salah satu dari matematika atau ipa atau ips mendapat nilai tinggi = pintar(orang) :- mendapat_nilai_tinggi(matematika) ; mendapat_nilai_tinggi(ipa) ; mendapat_nilai_tinggi(ips).
+	i. Setiap orang pasti mati = orang(setiap,mati).
+
+
+
+
+
+
+
+
+

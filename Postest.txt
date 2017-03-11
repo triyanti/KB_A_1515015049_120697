@@ -1,0 +1,17 @@
+Nama 	: Triyanti Wafda Malini
+Nim 	: 1515015049
+Kecerdasan Buatan
+
+
+Macam-macam keyword pada visual prolog
+
+1. determ 	: menentukan bahwa hanya boleh ada satu fakta dari suatu predikat sepanjang program berjalan.
+2. nondeterm 	: menentukan bahwa kemungkinan ada sejumlah fakta dari suatu predikat sepanjang program berjalan (default).
+3. global 	: menentukan bahwa section fact adalah global dalam program.
+4. single 	: menentukan hanya satu fakta dari predikat yang akan selalu ada.
+5. nocopy 	: normalnya panggilan fakta akan mengikat variable ke sebuah string atau ke sebuah objek jamak.
+6. clause 	: memberikan fakta-fakta yang ada untuk memberikan gambaran kepada VPE dalam melakukan pengujian untuk menjadi solusi dari pertanyaan yang diberikan.
+7. domain 	: menyatakan jenis variable atau argumen.
+8. predicates 	: memberikan gambaran akan kata-kata yang ada dalam program.
+9. goal 	: menyatakan jenis variabel atau argumen.
+10. facts 	: untuk memulai section facts.
