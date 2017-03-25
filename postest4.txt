@@ -1,0 +1,50 @@
+Nama	: Triyanti Wafda Malini
+NIM	: 1515015049
+Kelas	: A'2015
+
+
+Backtrack program CH04E07.PRO
+
+Untuk mengetahui terjadinya lacakbalik, akan diamati langkah demi langkah 
+bagaimana Visual Prolog mencari solusi dari goal yang diberikan.
+
+1. 	Visual Prolog memanggil predikat buy_car dengan variabel corvette dan Y. 
+	Untuk mencoba menjawab panggilan ini, Visual Prolog mencari di program 
+	untuk pencocokan. Ditemukan kecocokan dengan klausa buy_car, dan 
+	variabel Color diunifikasikan dengan variabel Y.
+
+2. 	Kemudian, Visual Prolog berusaha untuk memenuhi bagian body dari rule. 
+	Untuk melakukannya, Visual Prolog memanggil subgoal yang pertama pada 
+	body dari rule tersebut yaitu car(Model,Color,Price), dan mencari pencocokan 
+	untuk panggilan ini. Tidak ditemukan pencocokan dengan fakta pertama dari 
+	klausa relasi car.
+
+3. 	Kemudian, Visual Prolog berusaha untuk memenuhi bagian body dari rule. 
+	Untuk melakukannya, Visual Prolog memanggil subgoal yang pertama pada 
+	body dari rule tersebut yaitu car(Model,Color,Price), dan mencari pencocokan 
+	untuk panggilan ini. Ditemukan pencocokan dengan fakta kedua dari 
+	klausa relasi car. Pada titik ini Model diikat dengan nilai corvette. 
+	Kemudian Visual Prolog menset titik lacakbalik pada fakta car(corvette,black,24000).
+
+4. 	Dengan Model diikat pada nilai corvette, Visual Prolog membuat panggilan untuk subgoal 
+	yang kedua yaitu colors(Color,sexy), dan mencari pencocokan. Dan menemukan dengan 
+	fakta yang pertama colors(red,sexy). color diikat dengan nilai red dan Prolog 
+	menset titik lacakbalik pada colors(red,sexy). dan lacakbalik terhenti , setelah itu 
+	terdapat aturan harga lebih dari 25000.
+
+5. 	Visual Prolog, kemudian kembali ke titik lacakbalik selanjutnya yaitu pada car(corvette,red,26000). 
+	Variabel yang diikat pada pencocokan ini kemudian dibebaskan. Beranjak dari titik ini, 
+	Visual Prolog mencari solusi baru untuk panggilan buy_car(corvette,Y).
+
+6. 	Visual Prolog menemukan kecocokan dengan klausa tersebut. Y kemudian diikat dengan simbol red. 
+	Kemudian Visual Prolog mencoba lagi subgoal yang terakhir dengan variabel Y diikat pada nilai red. 
+	Panggilannya menjadi buy_car(corvette,red). Pencarian kembali dimulai dari bagian atas program karena 
+	merupakan panggilan baru dan menemukan kecocokan dengan fakta yang ada dan subgoal terakhir sukses (true).
+
+7.	Pada titik ini, body dari rule buy_car dapat dipenuhi. Visual Prolog mengembalikan nilai Y pada 
+	pemanggil (goal) buy_car(corvette,Y). maka sekarang Y diikat nilainya ke red pada goal tersebut. 
+	Visual Prolog kan menampilkan jawaban:
+
+	Y=red
+	1 Solution.
+	dan program berhenti dengan sukses.
