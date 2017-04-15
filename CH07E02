@@ -1,0 +1,26 @@
+/*****************************************************************************
+
+		Copyright (c) 1984 - 2000 Prolog Development Center A/S
+
+ Project:  
+ FileName: CH07E02.PRO
+ Purpose: 
+ Written by: PDC
+ Modifyed by: Eugene Akimov
+ Comments: 
+******************************************************************************/
+
+domains
+  list = integer* /* or whatever type you want to use */		%list bertipe data integer
+
+predicates
+  length_of(list,integer) - procedure (i,o)				%length of berisi parameter list dan integer
+
+clauses
+  length_of([], 0).							%length of berisi list kosong dan nilai integer 0
+  length_of([_|T],L):-							%length of berisi _serta T dan  L jika T length of TailLength dan L sama dengan TailLength ditambah 1
+	length_of(T,TailLength),
+	L = TailLength + 1.
+
+goal
+  length_of([1,2,3],L).							%length of berisi angka 1,2,3 dan L dan hasilnya L = 3 karena jumlah list yang terdaftar yaitu 3
